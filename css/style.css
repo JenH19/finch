@@ -1,22 +1,31 @@
 /* ============================================
-   Bright Finch Coaching — Warm Organic
-   Earthy terracotta/olive, blobby shapes, handwritten accents
+   Bright Finch Coaching — Deep Teal / Sage
+   Brand colours: Teal #0A4748 · Sage #CBD6C6
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=Caveat:wght@500;600&display=swap');
 
 :root {
-  --paper: #FBF3E7;
-  --paper-alt: #F3DCC4;
-  --ink: #3A2E22;
-  --ink-soft: #6B5A47;
-  --ink-faint: #A0876E;
-  --moss: #6B7A4F;
-  --moss-deep: #4E5A38;
-  --rust: #D97A4D;
-  --mustard: #E0A857;
-  --line: #E8D2B8;
-  --line-soft: #F0E2CC;
+  /* Brand palette */
+  --teal: #0A4748;
+  --teal-mid: #0D5C5E;
+  --teal-dark: #062E2F;
+  --sage: #CBD6C6;
+  --sage-light: #EFF4EE;
+  --sage-mid: #9EAEA9;
+
+  /* Semantic tokens (keep original names so all rules work unchanged) */
+  --paper: #FFFFFF;
+  --paper-alt: #EFF4EE;     /* sage-light */
+  --ink: #0D2B2C;
+  --ink-soft: #3B5354;
+  --ink-faint: #7A9898;
+  --moss: #0A4748;          /* = teal, used for retreat block */
+  --moss-deep: #062E2F;     /* = teal-dark, used for footer / hover */
+  --rust: #0A4748;          /* primary accent → teal */
+  --mustard: #CBD6C6;       /* highlight on dark bg → sage */
+  --line: #CBD6C6;          /* dividers → sage */
+  --line-soft: #EFF4EE;     /* soft dividers → sage-light */
 
   --serif: 'Fraunces', Georgia, serif;
   --sans: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -106,7 +115,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   background: var(--rust);
   color: var(--paper);
 }
-.btn-solid:hover { background: var(--moss-deep); border-color: var(--moss-deep); transform: translateY(-1px) rotate(-1deg); }
+.btn-solid:hover { background: var(--teal-mid); border-color: var(--teal-mid); transform: translateY(-1px) rotate(-1deg); }
 
 .btn-outline {
   background: transparent;
@@ -141,7 +150,6 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   gap: 10px;
 }
 
-.wordmark svg { width: 22px; height: 22px; flex-shrink: 0; }
 
 .nav-links {
   display: flex;
@@ -230,8 +238,8 @@ section { padding: 92px 0; }
   color: var(--moss-deep);
 }
 
-/* ---------- finch mark ---------- */
-.finch-mark { stroke: var(--rust); fill: none; stroke-width: 1.4; }
+/* ---------- wordmark logo ---------- */
+.wordmark img { height: 40px; width: auto; }
 
 /* ---------- card grid ---------- */
 .grid-3 {
@@ -338,7 +346,7 @@ section { padding: 92px 0; }
 }
 .retreat-block h2, .retreat-block .eyebrow { color: var(--paper); }
 .retreat-block .eyebrow { color: var(--mustard); }
-.retreat-block p { color: #E4E8DA; }
+.retreat-block p { color: #B0CECE; }
 .retreat-block .btn-outline { border-color: var(--paper); color: var(--paper); }
 .retreat-block .btn-outline:hover { background: var(--paper); color: var(--moss-deep); }
 .retreat-image { border-radius: var(--blob-1); overflow: hidden; aspect-ratio: 4/3; }
@@ -394,7 +402,7 @@ form.contact-form {
   grid-template-columns: 1.3fr 1fr 1fr;
   gap: 40px;
   padding-bottom: 32px;
-  border-bottom: 1px solid #5C6A45;
+  border-bottom: 1px solid #1A4849;
 }
 .site-footer h4 {
   font-family: var(--script);
@@ -404,10 +412,9 @@ form.contact-form {
   margin-bottom: 10px;
 }
 .site-footer .wordmark { color: var(--paper); }
-.site-footer .wordmark svg { stroke: var(--mustard); }
-.site-footer p { color: #B7C0A8; font-size: 14px; }
-.site-footer a { font-size: 14px; color: #DCE0D0; }
-.site-footer a:hover { color: var(--mustard); }
+.site-footer p { color: #8AACAC; font-size: 14px; }
+.site-footer a { font-size: 14px; color: #B0CECE; }
+.site-footer a:hover { color: var(--sage); }
 .footer-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
 .footer-bottom {
   padding-top: 24px;
@@ -417,7 +424,7 @@ form.contact-form {
   gap: 12px;
   font-family: var(--sans);
   font-size: 12px;
-  color: #93A17F;
+  color: #6A9A9B;
 }
 
 /* ---------- utility ---------- */
