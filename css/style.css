@@ -6,26 +6,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=Caveat:wght@500;600&display=swap');
 
 :root {
-  /* Brand palette */
-  --teal: #0A4748;
-  --teal-mid: #0D5C5E;
-  --teal-dark: #062E2F;
-  --sage: #CBD6C6;
-  --sage-light: #EFF4EE;
-  --sage-mid: #9EAEA9;
+  /* Brand palette — all 6 colours */
+  --teal: #0A4748;          /* Deep Teal — primary */
+  --teal-light: #8ABCBC;    /* Light Teal — hover / soft accent */
+  --navy: #004466;          /* Deep Navy — footer bg */
+  --sage: #D6DFCE;          /* Sage — light backgrounds / borders */
+  --sage-light: #EFF4EE;    /* Sage tint — section alt bg */
+  --gold: #E09200;          /* Amber Gold — highlight on dark */
+  --mauve: #A48EA2;         /* Muted Mauve — tags / secondary accent */
 
-  /* Semantic tokens (keep original names so all rules work unchanged) */
+  /* Semantic tokens */
   --paper: #FFFFFF;
-  --paper-alt: #EFF4EE;     /* sage-light */
+  --paper-alt: #EFF4EE;
   --ink: #0D2B2C;
   --ink-soft: #3B5354;
   --ink-faint: #7A9898;
-  --moss: #0A4748;          /* = teal, used for retreat block */
-  --moss-deep: #062E2F;     /* = teal-dark, used for footer / hover */
-  --rust: #0A4748;          /* primary accent → teal */
-  --mustard: #CBD6C6;       /* highlight on dark bg → sage */
-  --line: #CBD6C6;          /* dividers → sage */
-  --line-soft: #EFF4EE;     /* soft dividers → sage-light */
+  --moss: #0A4748;          /* teal — retreat block bg */
+  --moss-deep: #004466;     /* navy — footer bg */
+  --rust: #0A4748;          /* teal — primary CTA accent */
+  --mustard: #E09200;       /* gold — accent on dark backgrounds */
+  --line: #D6DFCE;          /* sage — dividers */
+  --line-soft: #EFF4EE;     /* sage tint — soft dividers */
 
   --serif: 'Fraunces', Georgia, serif;
   --sans: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -90,8 +91,8 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   font-family: var(--sans);
   font-size: 11px;
   letter-spacing: 0.04em;
-  color: var(--moss-deep);
-  border: 1px solid var(--moss);
+  color: var(--mauve);
+  border: 1px solid var(--mauve);
   border-radius: 20px;
   padding: 3px 12px;
   display: inline-block;
@@ -115,7 +116,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   background: var(--rust);
   color: var(--paper);
 }
-.btn-solid:hover { background: var(--teal-mid); border-color: var(--teal-mid); transform: translateY(-1px) rotate(-1deg); }
+.btn-solid:hover { background: var(--teal-light); border-color: var(--teal-light); transform: translateY(-1px) rotate(-1deg); }
 
 .btn-outline {
   background: transparent;
@@ -240,6 +241,23 @@ section { padding: 92px 0; }
 
 /* ---------- wordmark logo ---------- */
 .wordmark img { height: 40px; width: auto; }
+
+/* ---------- bird mark divider ---------- */
+.mark-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 8px 0;
+}
+.mark-divider::before,
+.mark-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.mark-divider img { height: 36px; width: auto; opacity: 0.55; }
 
 /* ---------- card grid ---------- */
 .grid-3 {
@@ -402,7 +420,7 @@ form.contact-form {
   grid-template-columns: 1.3fr 1fr 1fr;
   gap: 40px;
   padding-bottom: 32px;
-  border-bottom: 1px solid #1A4849;
+  border-bottom: 1px solid #1A3B55;
 }
 .site-footer h4 {
   font-family: var(--script);
@@ -412,9 +430,9 @@ form.contact-form {
   margin-bottom: 10px;
 }
 .site-footer .wordmark { color: var(--paper); }
-.site-footer p { color: #8AACAC; font-size: 14px; }
-.site-footer a { font-size: 14px; color: #B0CECE; }
-.site-footer a:hover { color: var(--sage); }
+.site-footer p { color: #8AACBC; font-size: 14px; }
+.site-footer a { font-size: 14px; color: #C0D4DC; }
+.site-footer a:hover { color: var(--gold); }
 .footer-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
 .footer-bottom {
   padding-top: 24px;
@@ -424,7 +442,7 @@ form.contact-form {
   gap: 12px;
   font-family: var(--sans);
   font-size: 12px;
-  color: #6A9A9B;
+  color: #6A8A9B;
 }
 
 /* ---------- utility ---------- */
