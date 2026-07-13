@@ -114,7 +114,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 
 .btn-solid {
   background: var(--rust);
-  color: var(--paper);
+  color: var(--paper) !important;
 }
 .btn-solid:hover { background: var(--teal-light); border-color: var(--teal-light); transform: translateY(-1px) rotate(-1deg); }
 
