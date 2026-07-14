@@ -117,7 +117,8 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   color: var(--paper);
 }
 /* override nav-links a color specificity for solid buttons */
-a.btn-solid { color: var(--paper); }
+a.btn-solid,
+.nav-links a.btn-solid { color: var(--paper); }
 .btn-solid:hover { background: var(--teal-light); border-color: var(--teal-light); transform: translateY(-1px) rotate(-1deg); }
 
 .btn-outline {
