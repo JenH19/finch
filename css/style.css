@@ -600,6 +600,12 @@ form.contact-form {
 .section-head { max-width: 640px; margin: 0 auto 56px; }
 .section-head.left { margin-left: 0; }
 
+/* Freebie strip */
+.freebie-strip { background: var(--sage-light); border-top: 1px solid var(--line); padding: 40px 0; }
+.freebie-strip-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.freebie-strip-inner .eyebrow { margin-bottom: 4px; }
+.freebie-strip-title { font-family: var(--serif); font-size: 1.35rem; color: var(--ink); margin: 0; font-style: italic; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
   .hero-grid, .about-grid, .contact-grid, .retreat-block { grid-template-columns: 1fr; }
