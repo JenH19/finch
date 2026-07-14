@@ -449,11 +449,11 @@ form.contact-form {
 
 /* ---------- hero brand mark ---------- */
 .hero-brand-mark {
-  width: 72px;
-  height: 72px;
-  border-radius: 18px;
-  margin-bottom: 24px;
-  box-shadow: 0 8px 24px -8px rgba(10,71,72,0.35);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 16px -6px rgba(10,71,72,0.3);
 }
 
 /* ---------- hero subheadline ---------- */
