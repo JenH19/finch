@@ -447,6 +447,15 @@ form.contact-form {
   color: #6A8A9B;
 }
 
+/* ---------- hero brand mark ---------- */
+.hero-brand-mark {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px -8px rgba(10,71,72,0.35);
+}
+
 /* ---------- hero subheadline ---------- */
 .hero-sub {
   font-family: var(--serif);
