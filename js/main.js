@@ -30,4 +30,26 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  var leadForm = document.querySelector('.lead-magnet-form');
+  if (leadForm) {
+    leadForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var redirectTo = leadForm.querySelector('[name="_next"]').value;
+      fetch(leadForm.action, {
+        method: 'POST',
+        body: new FormData(leadForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          localStorage.setItem('brightFinchClarityAccess', 'true');
+          window.location.href = redirectTo;
+        } else {
+          alert("Sorry, something went wrong sending your request. Please email jen@brightfinchcoaching.com directly.");
+        }
+      }).catch(function () {
+        alert("Sorry, something went wrong sending your request. Please email jen@brightfinchcoaching.com directly.");
+      });
+    });
+  }
 });
