@@ -179,8 +179,12 @@ a.btn-solid,
   color: var(--ink-soft);
   padding-bottom: 4px;
   border-bottom: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav-social:hover { color: var(--rust); border-bottom-color: var(--rust); }
+.nav-social-icon { display: block; width: 20px; height: 20px; }
 
 .nav-links a:hover,
 .nav-links a.active {
