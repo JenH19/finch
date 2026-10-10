@@ -172,6 +172,15 @@ a.btn-solid,
   padding-bottom: 4px;
   border-bottom: 2px solid transparent;
 }
+.nav-social {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+.nav-social:hover { color: var(--rust); border-bottom-color: var(--rust); }
 
 .nav-links a:hover,
 .nav-links a.active {
