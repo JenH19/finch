@@ -334,6 +334,15 @@ section { padding: 92px 0; }
   border-bottom: 1px dashed var(--line);
 }
 .event-card:last-child { border-bottom: none; padding-bottom: 0; }
+.event-status {
+  grid-column: 1 / -1;
+  padding: 14px 18px;
+  background: var(--teal);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-weight: 600;
+  text-align: center;
+}
 .event-image { border-radius: var(--blob-1); overflow: hidden; aspect-ratio: 4/3; }
 .event-image img { width: 100%; height: 100%; object-fit: cover; }
 .event-meta { font-family: var(--script); font-size: 17px; color: var(--rust); margin-bottom: 6px; display: block; }
