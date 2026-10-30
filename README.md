@@ -4,6 +4,12 @@ Static HTML/CSS site, "Fieldnotes" design direction (ivory paper, moss/rust
 ink, Fraunces + Work Sans + IBM Plex Mono). No CMS, no build step, no
 hosting fees — same pattern as the other sites.
 
+## Accounts
+
+- GitHub username: `JenH19`
+- Repo: https://github.com/JenH19/finch
+- Claude account logged in here: `jen@brightfinchcoaching.com`
+
 ## Folder structure
 
 ```
@@ -49,7 +55,7 @@ git init
 git add .
 git commit -m "Rebuild Bright Finch Coaching as a static site"
 git branch -M main
-git remote add origin https://github.com/<your-username>/<repo-name>.git
+git remote add origin git@github.com:JenH19/finch.git
 git push -u origin main
 ```
 
@@ -66,7 +72,7 @@ In Cloudflare DNS for brightfinchcoaching.com, point the A/CNAME records
 at GitHub Pages (same pattern as the other sites):
 
 - `A` records for the apex domain → GitHub Pages' 4 IPs
-- `CNAME` for `www` → `<your-username>.github.io`
+- `CNAME` for `www` → `JenH19.github.io`
 
 Add a `CNAME` file to the repo root containing `www.brightfinchcoaching.com`
 (or the apex, whichever you're using as canonical) so GitHub Pages knows
